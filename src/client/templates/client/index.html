@@ -1,0 +1,52 @@
+
+<div class="panel panel-primary">
+   
+        <div class=" panel-primary">
+            <h1 class="text-center">Liste des clients</h1>
+        </div>
+
+        <div class="panel-body"><div class="table-responsive">
+            <table class="table table-bordered table-hover" id="">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Numero</th>
+                        <th>Email</th>
+                        <th>Sexe</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    {% for client in clients %}
+                    <tr>
+                        <td>{{client.id}}</td>
+                        <td>{{client.nom}}</td>
+                        <td>{{client.prenom}}</td>
+                        <td>{{client.numero}}</td>
+                        <td>{{client.email}}</td>
+                        <td>{{client.sexe}}</td>
+                        <td>
+                            
+                            <a  href="" class="btn btn-primary btn-sm" >Modifier</a> 
+                            <a href="{% url 'supprimer_client' client.id %}" class="btn btn-danger btn-sm">
+                                Supprimer
+                            </a>
+                            
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+            
+        </div>
+     
+    
+    
+
+
+

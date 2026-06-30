@@ -1,0 +1,57 @@
+<div class="panel panel-success  ">
+    <div class="panel-heading">
+        <h4 class="">Ajouter un nouveau client</h4>
+    </div>
+        <div class="panel-body">
+            
+            <form action="{% url 'add' %}" method="POST" role="form">
+                {% csrf_token %}
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" class="form-control" id="nom"  name="nom"placeholder="veuillez entrer un nom">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="prenom">Prenom</label>
+                            <input type="text" class="form-control" id="prenom"  name="prenom"placeholder="veuillez entrer un prenom">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="numero">Numero</label>
+                            <input type="number" class="form-control" id="numero"  name="numero"placeholder="veuillez entrer un numero">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email"  name="email"placeholder="veuillez entrer un email">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <select class="form-select" name="sexe" aria-label="Default select example">
+                            <option value="">selectionner</option>
+                            <option value="M">M</option>
+                            <option value="Mme">Mme</option>
+                            
+                        </select>
+                    </div>
+                </div><br>
+                <button type="submit" class="btn btn-primary">enregistrer</button>
+            </form>
+            
+        </div>
+    
+</div>
